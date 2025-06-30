@@ -13,6 +13,10 @@ public class WeatherResponseDTO {
     private LocalDateTime timestamp;
 
     public WeatherResponseDTO(String email, String zipCode, String weatherDetails, LocalDateTime timestamp) {
+        this.email = email;
+        this.zipCode = zipCode;
+        this.weatherDetails = weatherDetails;
+        this.timestamp = timestamp;
     }
 
     public WeatherResponseDTO() {
