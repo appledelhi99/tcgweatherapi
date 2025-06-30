@@ -42,7 +42,7 @@ public class UserService {
      */
     public User registerUser(String email) {
         if (userRepository.findByEmail(email) != null) {
-            throw new UserAlreadyRegisteredException("Already user registered");
+            throw new UserAlreadyRegisteredException("User already registered");
         }
         User user = new User();
         user.setEmail(email);

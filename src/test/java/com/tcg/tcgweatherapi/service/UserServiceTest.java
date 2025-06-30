@@ -56,7 +56,7 @@ class UserServiceTest {
             userService.registerUser(email);
         });
 
-        assertEquals("Already user registered", exception.getMessage());
+        assertEquals("User already registered", exception.getMessage());
         verify(userRepository, times(1)).findByEmail(email);
         verify(userRepository, never()).save(any(User.class));
     }
